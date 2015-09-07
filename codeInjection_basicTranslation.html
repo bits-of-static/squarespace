@@ -1,0 +1,140 @@
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	basicTranslation_dictionary = {
+		"mobileBar": {
+				"Email": 		"Email", 
+				"Call": 		"Anruf", 
+				"Map": 			"Karte", 
+				"Hours": 		"Zeiten"
+			}, 
+		"contactFormLabel": {
+				"First Name": 	"Vorname", 
+				"Last Name": 	"Nachname"
+			}, 
+		"contactFormError": {
+				"is required.": 																"ist erforderlich.", 
+				"is not valid. Email addresses should follow the format user@domain.com.": 		"folgt die Konvention benutzer@domain.com.", 
+				"Your form has encountered a problem.": 										"Oops, da ging etwas schief.",
+				"Please scroll down to review.": 												"", 
+				"Please scroll up to review.": 													""
+			}, 
+		"commentingSectionHeader": {
+				"Comments": 					"Kommentare", 
+				"Newest First": 				"Neuste zuerst", 
+				"Oldest First": 				"Älteste zuerst", 
+				"Most Liked": 					"Beliebteste zuerst", 
+				"Least Liked": 					"Unbeliebteste zuerst", 
+				"Subscribe via e-mail": 		"Per E-Mail Abonieren"
+			}, 
+		"commentingEntryHeader": {
+				"Pending": 					"In Prozess", 
+				"Awaiting Moderation": 		"Wartet auf Moderator", 
+				"Not Logged In": 			"Nicht eingelogged"
+			}, 
+		"commentingEntryButtons": {
+				"Preview": 					"Vorschau", 
+				"Edit": 					"Editieren", 
+				"Post Comment…": 			"Kommentar abschicken…", 
+				"Post Reply": 				"Antwort Abschicken"
+			}, 
+		"commentingTime": {
+				"Just now": 				"Jetzt", 
+				"An": 						"", 
+				"A": 						"", 
+				"minute ago": 				"Minute alt", 
+				"minutes ago": 				"Minuten alt", 
+				"hour ago": 				"Stunde alt", 
+				"hours ago": 				"Stunden alt", 
+				"day ago": 					"Tag alt", 
+				"days ago": 				"Tage alt"
+		}
+	};
+
+	/************************************************************************************/
+	basicTranslation_selectors = {
+		"mobileBar": 					".sqs-mobile-info-bar-trigger-label", //direct, assign
+		"contactFormLabel": 			"form label.caption", //filter, assign
+		"contactFormError": 			"form div.field-error", //direct, replace
+		"commentingSectionHeader": 		"h3.comment-count span, div.comment-controls span, div.comment-controls option", //direct, assign
+		"commentingEntryHeader": 		"div.comment-header span", //direct, replace
+		"commentingEntryButtons": 		"div.comment-btn-wrapper>span", //direct, assign
+		"commentingTime": 				"div.comment-header span.timesince" //direct, replace
+	};
+
+	/************************************************************************************/
+	/************************************************************************************/
+	/************************************************************************************/
+	jQuery(document).ready( function() {
+		
+		var mutationObserver = new MutationObserver(basicTranslation_mutationObserver);
+		mutationObserver.observe(document, { subtree: true, childList: true, characterData: true });
+		
+		basicTranslation_naiveReplace(jQuery(basicTranslation_selectors["mobileBar"]), "mobileBar", basicTranslation_isTextNode);
+		basicTranslation_naiveReplace(jQuery(basicTranslation_selectors["contactFormLabel"]), "contactFormLabel", basicTranslation_isTextNode);
+	}); //onStartup
+
+	/************************************************************************************/
+	basicTranslation_isTextNode = function() {
+		return this.nodeType === 3;
+	}; //routine
+	basicTranslation_isAnyNode = function() {
+		return true;
+	}; //routine
+
+	/************************************************************************************/
+	basicTranslation_mutationObserver = function(mutations, observer) {
+		
+		for (var i=0; i<mutations.length; i++) {
+			var mutationRecord = mutations[i];
+			switch (mutationRecord.type) {
+				case "childList":
+					if (!("addedNodes" in mutationRecord) || mutationRecord.addedNodes.length===0) {
+						break;
+					} //if
+					
+					var addedNodes = jQuery(mutationRecord.addedNodes);
+					
+					basicTranslation_naiveReplace(addedNodes, "contactFormLabel", basicTranslation_isTextNode);
+					basicTranslation_naiveReplace(addedNodes, "contactFormError", basicTranslation_isTextNode);
+					basicTranslation_naiveReplace(addedNodes, "commentingSectionHeader", basicTranslation_isTextNode);
+					basicTranslation_naiveReplace(addedNodes, "commentingEntryHeader", basicTranslation_isTextNode);
+					basicTranslation_naiveReplace(addedNodes, "commentingEntryButtons", basicTranslation_isTextNode);
+					basicTranslation_naiveReplace(addedNodes, "commentingTime", basicTranslation_isTextNode);
+					break;
+					
+				case "characterData": 
+					
+					switch (mutationRecord.target.parentNode.className) {
+						case "timesince":
+							basicTranslation_naiveReplace(jQuery(mutationRecord.target.parentNode), "commentingTime", basicTranslation_isTextNode);
+							break;
+							
+						case "btn-text preview-comment top-level-preview-btn":
+							console.log(mutationRecord.target.parentNode.className, mutationRecord.target.data);
+							basicTranslation_naiveReplace(jQuery(mutationRecord.target.parentNode), "commentingEntryButtons", basicTranslation_isTextNode);
+							break;
+					} //switch
+					
+					break;
+			} //switch
+		} //for
+		
+		observer.takeRecords();
+	}; //onDemand
+
+	/************************************************************************************/
+	basicTranslation_naiveReplace = function(nodes, section, filter) {
+		
+		nodes
+			.find(basicTranslation_selectors[section])
+			.addBack(basicTranslation_selectors[section])
+			.contents()
+			.filter(filter)
+			.each(function() {
+				for (var originPhrase in basicTranslation_dictionary[section]) {
+					var destinationPhrase = basicTranslation_dictionary[section][originPhrase];
+					this.data = this.data.replace(originPhrase, destinationPhrase);
+				}
+			});
+	}; //routine
+</script>
