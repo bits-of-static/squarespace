@@ -32,7 +32,7 @@
             <Keywords name="Keywords6">squarespace-headers&#x000D;&#x000A;squarespace.page-classes&#x000D;&#x000A;squarespace.page-id&#x000D;&#x000A;squarespace.main-content&#x000D;&#x000A;squarespace-post-entry&#x000D;&#x000A;squarespace-footers&#x000D;&#x000A;originalSize</Keywords>
             <Keywords name="Keywords7">.Debug?</Keywords>
             <Keywords name="Keywords8">?format=json&#x000D;&#x000A;?format=json-pretty&#x000D;&#x000A;?format=rss&#x000D;&#x000A;?format=main-content&#x000D;&#x000A;?category=&#x000D;&#x000A;?tag=&#x000D;&#x000A;?month=&#x000D;&#x000A;?format=original&#x000A;&#x000D;&#x000A;?format=1500w&#x000A;&#x000D;&#x000A;?format=1000w&#x000A;&#x000D;&#x000A;?format=750w&#x000A;&#x000D;&#x000A;?format=500w&#x000D;&#x000A;?format=300w&#x000D;&#x000A;&#x000A;?format=100w&#x000D;&#x000A;content-fill&#x000D;&#x000A;content-fit</Keywords>
-            <Keywords name="Delimiters">00&lt;script 01 02&lt;/script&gt; 03{ 04 05} 06&lt; 07 08&gt; 09 10 11 12 13 14 15 16 17 18 19 20 21&quot; 22\&quot; 23&quot;</Keywords>
+            <Keywords name="Delimiters">00&lt;script 01 02&lt;/script&gt; 03&lt;style&gt; 04 05&lt;/style&gt; 06 07 08 09 10 11 12{ 13 14} 15&lt; 16 17&gt; 18 19 20 21&quot; 22\&quot; 23&quot;</Keywords>
         </KeywordLists>
         <Styles>
             <WordsStyle name="DEFAULT" fgColor="8080FF" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
@@ -51,12 +51,12 @@
             <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN CODE2" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN COMMENT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS1" fgColor="FFC87D" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="16777216" />
-            <WordsStyle name="DELIMITERS2" fgColor="41B63A" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="17026048" />
-            <WordsStyle name="DELIMITERS3" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="143490" />
-            <WordsStyle name="DELIMITERS4" fgColor="008000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="15360" />
-            <WordsStyle name="DELIMITERS5" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="16894976" />
-            <WordsStyle name="DELIMITERS6" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="144" />
+            <WordsStyle name="DELIMITERS1" fgColor="FFC87D" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS2" fgColor="FFAF95" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS3" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS4" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS5" fgColor="41B63A" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="17026048" />
+            <WordsStyle name="DELIMITERS6" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="143490" />
             <WordsStyle name="DELIMITERS7" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS8" fgColor="A8D7D7" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="131074" />
         </Styles>
