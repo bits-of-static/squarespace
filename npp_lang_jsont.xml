@@ -13,7 +13,7 @@
             <Keywords name="Numbers, suffix1"></Keywords>
             <Keywords name="Numbers, suffix2"></Keywords>
             <Keywords name="Numbers, range"></Keywords>
-            <Keywords name="Operators1">@ @index |%&#x000D;&#x000A;&#x000D;&#x000A;|item-classes |social-button-inline |social-button |comments |comment-link |comment-count |like-button |image-meta&#x000D;&#x000A;&#x000D;&#x000A;|apply |width |height&#x000D;&#x000A;&#x000D;&#x000A;|json |json-pretty |slugify |url-encode |htmlattr |html |activate-twitter-links |safe |count |pluralize |date |timesince |html |htmltag |slugify |smartypants &#x000D;&#x000A;</Keywords>
+            <Keywords name="Operators1">@ @index |%&#x000D;&#x000A;&#x000D;&#x000A; |item-classes |social-button-inline |social-button |comments |comment-link |comment-count |like-button |image-meta&#x000D;&#x000A;&#x000D;&#x000A; |apply |width |height&#x000D;&#x000A;&#x000D;&#x000A; |json-pretty |json |slugify |url-encode |htmlattr |html |activate-twitter-links |safe |count |pluralize |date |timesince |html |htmltag |slugify |smartypants &#x000D;&#x000A;&#x000D;&#x000A; |product-price |product-checkout |product-status</Keywords>
             <Keywords name="Operators2"></Keywords>
             <Keywords name="Folders in code1, open"></Keywords>
             <Keywords name="Folders in code1, middle"></Keywords>
@@ -51,7 +51,7 @@
             <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN CODE2" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN COMMENT" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="DELIMITERS1" fgColor="FFC87D" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="DELIMITERS1" fgColor="FFC87D" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="128" />
             <WordsStyle name="DELIMITERS2" fgColor="FFAF95" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS3" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="DELIMITERS4" fgColor="C0C0C0" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
