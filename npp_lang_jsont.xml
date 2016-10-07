@@ -2,7 +2,7 @@
     <UserLang name="jsonTemplate" ext="region block item list" udlVersion="2.1">
         <Settings>
             <Global caseIgnored="yes" allowFoldOfComments="no" foldCompact="no" forcePureLC="0" decimalSeparator="0" />
-            <Prefix Keywords1="no" Keywords2="no" Keywords3="yes" Keywords4="yes" Keywords5="no" Keywords6="yes" Keywords7="no" Keywords8="yes" />
+            <Prefix Keywords1="no" Keywords2="no" Keywords3="yes" Keywords4="no" Keywords5="no" Keywords6="yes" Keywords7="yes" Keywords8="yes" />
         </Settings>
         <KeywordLists>
             <Keywords name="Comments">00{# 01 02} 03&lt;!-- 04--&gt;</Keywords>
@@ -13,7 +13,7 @@
             <Keywords name="Numbers, suffix1"></Keywords>
             <Keywords name="Numbers, suffix2"></Keywords>
             <Keywords name="Numbers, range"></Keywords>
-            <Keywords name="Operators1">@ @index |%&#x000D;&#x000A;&#x000D;&#x000A; |item-classes |social-button-inline |social-button |comments |comment-link |comment-count |like-button |image-meta&#x000D;&#x000A;&#x000D;&#x000A; |apply |width |height&#x000D;&#x000A;&#x000D;&#x000A; |json-pretty |json |slugify |url-encode |htmlattr |html |activate-twitter-links |safe |count |pluralize |date |timesince |html |htmltag |slugify |smartypants &#x000D;&#x000A;&#x000D;&#x000A; |product-price |product-checkout |product-status</Keywords>
+            <Keywords name="Operators1">@ @index |%&#x000D;&#x000A;&#x000D;&#x000A; |item-classes |comments |comment-link |comment-count |like-button |activate-twitter-links |social-button-inline |social-button&#x000D;&#x000A;&#x000D;&#x000A; |apply |width |height |count |image-meta&#x000D;&#x000A;&#x000D;&#x000A; |json-pretty |json&#x000D;&#x000A;&#x000D;&#x000A; |html |htmlattr |htmltag |safe |slugify |url-encode |pluralize |smartypants |truncate |date |timesince&#x000D;&#x000A;&#x000D;&#x000A; |product-price |product-checkout |product-status</Keywords>
             <Keywords name="Operators2"></Keywords>
             <Keywords name="Folders in code1, open"></Keywords>
             <Keywords name="Folders in code1, middle"></Keywords>
@@ -24,14 +24,14 @@
             <Keywords name="Folders in comment, open"></Keywords>
             <Keywords name="Folders in comment, middle"></Keywords>
             <Keywords name="Folders in comment, close"></Keywords>
-            <Keywords name="Keywords1">.section .repeated .alternates .end</Keywords>
-            <Keywords name="Keywords2">.or .if &#x000D;&#x000A;&#x000D;&#x000A;.collection? .passthrough? .index?&#x000D;&#x000A;&#x000D;&#x000A;.even? .odd?&#x000D;&#x000A;&#x000D;&#x000A;.equal?&#x000D;&#x000A;&#x000D;&#x000A;.main-image? .excerpt? .comments? .disqus? .video? .event? &#x000D;&#x000A;&#x000D;&#x000A;.location?&#x000D;&#x000A;.folder? .external-link? &#x000D;&#x000A;&#x000D;&#x000A;.plural? .singular? .same-day?&#x000D;&#x000A;&#x000D;&#x000A;.promotemap? .promoteembed? .promoteimage? .promotecode? .promotequote? .promotetwitter? .promotelink? .promotevideo? .promotefoursquare? .promoteinstagram? .promoteform?&#x000D;&#x000A;</Keywords>
-            <Keywords name="Keywords3">squarespace:script&#x000D;&#x000A;squarespace:block-field&#x000D;&#x000A;squarespace:navigation &#x000D;&#x000A;squarespace:folder-navigation&#x000D;&#x000A;squarespace:query /squarespace:query &#x000D;&#x000A;main /main&#x000D;&#x000A;nav /nav&#x000D;&#x000A;article /article&#x000D;&#x000A;data-content-field=&#x000D;&#x000A;data-item-id=&#x000D;&#x000A;data-collection-id=&#x000D;&#x000A;header /header&#x000D;&#x000A;section /section&#x000D;&#x000A;footer /footer</Keywords>
-            <Keywords name="Keywords4">class= href= value= type= for= id= name= content= http-equiv= src= href= target= title= rel= style= alt= lang=&#x000D;&#x000A;&#x000D;&#x000A;template= navigationId= columns= lock-layout= label= role= combo= collection= featured= limit= category=&#x000D;&#x000A;&#x000D;&#x000A;on data-&#x000D;&#x000A;&#x000D;&#x000A;aria-</Keywords>
+            <Keywords name="Keywords1">.section .repeated .alternates .end .var</Keywords>
+            <Keywords name="Keywords2">.or .if .equal?&#x000D;&#x000A;&#x000D;&#x000A;.even? .odd? .plural? .singular? .same-day?&#x000D;&#x000A;&#x000D;&#x000A;.collection? .passthrough? .index? .folder? .main-image? .excerpt? .comments? .disqus? .video? .event? .background-source-video? .location? .external-link? &#x000D;&#x000A;&#x000D;&#x000A;.promotemap? .promoteembed? .promoteimage? .promotecode? .promotequote? .promotetwitter? .promotelink? .promotevideo? .promotefoursquare? .promoteinstagram? .promoteform?&#x000D;&#x000A;&#x000D;&#x000A;.Debug?</Keywords>
+            <Keywords name="Keywords3">squarespace:script&#x000D;&#x000A;squarespace:block-field&#x000D;&#x000A;squarespace:navigation&#x000D;&#x000A;squarespace:category /squarespace:category&#x000D;&#x000A;squarespace:folder-navigation&#x000D;&#x000A;squarespace:query /squarespace:query &#x000D;&#x000A;main /main&#x000D;&#x000A;nav /nav&#x000D;&#x000A;article /article&#x000D;&#x000A;header /header&#x000D;&#x000A;section /section&#x000D;&#x000A;footer /footer</Keywords>
+            <Keywords name="Keywords4">data&#x00AD;preserve&#x00AD;html&#x00AD;node= combo= data&#x00AD;load= template= navigationId= columns= lock-layout= label= role= collection= featured= limit= skip= category= tag= data-content-field= data-item-id= data-collection-id= data-src= data-image-dimensions= data-image-width= data-image-height= data-content-field= role= data-item-id data-collection-id</Keywords>
             <Keywords name="Keywords5">.space .tab .newline .meta-left .meta-right</Keywords>
             <Keywords name="Keywords6">squarespace-headers&#x000D;&#x000A;squarespace.page-classes&#x000D;&#x000A;squarespace.page-id&#x000D;&#x000A;squarespace.main-content&#x000D;&#x000A;squarespace-post-entry&#x000D;&#x000A;squarespace-footers&#x000D;&#x000A;originalSize</Keywords>
-            <Keywords name="Keywords7">.Debug?</Keywords>
-            <Keywords name="Keywords8">?format=json&#x000D;&#x000A;?format=json-pretty&#x000D;&#x000A;?format=rss&#x000D;&#x000A;?format=main-content&#x000D;&#x000A;?category=&#x000D;&#x000A;?tag=&#x000D;&#x000A;?month=&#x000D;&#x000A;?format=original&#x000A;&#x000D;&#x000A;?format=1500w&#x000A;&#x000D;&#x000A;?format=1000w&#x000A;&#x000D;&#x000A;?format=750w&#x000A;&#x000D;&#x000A;?format=500w&#x000D;&#x000A;?format=300w&#x000D;&#x000A;&#x000A;?format=100w&#x000D;&#x000A;content-fill&#x000D;&#x000A;content-fit</Keywords>
+            <Keywords name="Keywords7">class= href= value= type= for= id= name= content= http-equiv= src= href= target= title= rel= style= alt= lang=&#x000D;&#x000A;&#x000D;&#x000A;on&#x000D;&#x000A;data-&#x000D;&#x000A;aria-</Keywords>
+            <Keywords name="Keywords8">?format=json&#x000D;&#x000A;?format=json-pretty&#x000D;&#x000A;?format=rss&#x000D;&#x000A;?format=main-content&#x000D;&#x000A;?minify=&#x000D;&#x000A;?category=&#x000D;&#x000A;?tag=&#x000D;&#x000A;?month=&#x000D;&#x000A;?format=original&#x000A;&#x000D;&#x000A;?format=1500w&#x000A;&#x000D;&#x000A;?format=1000w&#x000A;&#x000D;&#x000A;?format=750w&#x000A;&#x000D;&#x000A;?format=500w&#x000D;&#x000A;?format=300w&#x000D;&#x000A;&#x000A;?format=100w&#x000D;&#x000A;content-fill&#x000D;&#x000A;content-fit</Keywords>
             <Keywords name="Delimiters">00&lt;script 01 02&lt;/script&gt; 03&lt;style&gt; 04 05&lt;/style&gt; 06 07 08 09 10 11 12{ 13 14} 15&lt; 16 17&gt; 18 19 20 21&quot; 22\&quot; 23&quot;</Keywords>
         </KeywordLists>
         <Styles>
@@ -42,10 +42,10 @@
             <WordsStyle name="KEYWORDS1" fgColor="80FF80" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="B3FF80" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS3" fgColor="FF93C6" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
-            <WordsStyle name="KEYWORDS4" fgColor="808080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS4" fgColor="9F609B" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS5" fgColor="8080FF" bgColor="FFFFFF" fontName="" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS6" fgColor="FF93A6" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS7" fgColor="FF0000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
+            <WordsStyle name="KEYWORDS7" fgColor="808080" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS8" fgColor="FF80FF" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="OPERATORS" fgColor="A0E39D" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
             <WordsStyle name="FOLDER IN CODE1" fgColor="000000" bgColor="FFFFFF" fontName="" fontStyle="0" nesting="0" />
